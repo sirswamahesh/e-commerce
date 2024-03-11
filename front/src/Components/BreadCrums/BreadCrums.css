@@ -1,0 +1,20 @@
+/* .breadcrum {
+  padding: 100px;
+} */
+.bread-crums {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 4px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .bread-crums {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .bread-crums {
+    font-size: 10px;
+  }
+}

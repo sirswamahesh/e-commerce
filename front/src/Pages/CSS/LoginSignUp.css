@@ -1,0 +1,113 @@
+.loginsignup {
+  background-color: skyblue;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-signup-container {
+  background-color: white;
+  width: 40%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.login-signup-feilds input {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid #c7c6c6;
+  outline: none;
+}
+.login-signup-btn {
+  background-color: red;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-signup-already {
+  margin: 10px 0px;
+}
+.login-signup-already span {
+  font-weight: 600;
+}
+.login-signup-agree {
+  display: flex;
+  gap: 20px;
+}
+
+.login-signup-btn:active {
+  background-color: rgb(139, 126, 126);
+}
+@media (max-width: 1024px) {
+  .loginsignup {
+    display: flex;
+    align-items: center;
+  }
+  .login-signup-container {
+    width: 55%;
+  }
+}
+@media (max-width: 800px) {
+  .loginsignup {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+  }
+  .login-signup-container {
+    width: 55%;
+    padding: 30px;
+  }
+  .login-signup-feilds input {
+    height: 40px;
+    margin: 7px 0px;
+  }
+  .login-signup-btn {
+    height: 40px;
+  }
+  .login-signup-already {
+    font-size: 14px;
+  }
+  .login-signup-agree {
+    font-size: 14px;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .loginsignup {
+    background-color: skyblue;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .login-signup-container {
+    width: 80%;
+    padding: 30px;
+  }
+  .login-signup-feilds input {
+    height: 40px;
+    margin: 7px 0px;
+  }
+  .login-signup-btn {
+    height: 40px;
+  }
+  .login-signup-already {
+    font-size: 14px;
+  }
+  .login-signup-agree {
+    font-size: 14px;
+    align-items: center;
+    gap: 10px;
+  }
+}

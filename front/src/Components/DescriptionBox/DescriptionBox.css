@@ -1,0 +1,30 @@
+.description-box {
+  margin: 0px auto;
+  width: calc(100%-200px);
+  margin-top: 70px;
+}
+.discription-box-btn {
+  display: flex;
+}
+.discription-box-des {
+  border: 1px solid #727070;
+  padding: 15px 20px;
+}
+
+.discription-box-btn .fade {
+  color: #727070;
+}
+.discription-box-description {
+  border: 1px solid #727070;
+  padding: 40px;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .discription-box-description {
+    padding: 20px;
+  }
+  .discription-box-des {
+    padding: 9px 15px;
+  }
+}

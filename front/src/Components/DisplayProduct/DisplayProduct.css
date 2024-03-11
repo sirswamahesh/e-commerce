@@ -1,0 +1,228 @@
+.displayproduct-left {
+  display: flex;
+  gap: 10px;
+}
+.displayproduct-img-list img {
+  height: 114px;
+}
+.displayproduct-img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.displayproduct-main-img img {
+  width: 400px;
+}
+.display-product {
+  display: flex;
+  gap: 50px;
+}
+.displayproduct-prices {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.displayproduct-prices .displayproduct-old-price {
+  color: #8d8a8a;
+  text-decoration: line-through;
+}
+
+.displayproduct-discription {
+  margin-bottom: 10px;
+}
+.displayproduct-select-size h3 {
+  color: #8d8a8a;
+}
+.displayproduct-select-size-list {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0px;
+}
+
+.displayproduct-select-size-list div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f7f1f1;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #8d8a8a;
+  border-radius: 5px;
+}
+
+.displayproduct-addtocart {
+  background-color: red;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.displayproduct-addtocart:hover {
+  background-color: rgb(219, 76, 76);
+  box-shadow: 0px 0px 8px 0px rgba(255, 0, 0, 1);
+}
+
+.displayproduct-category {
+  margin-top: 20px;
+}
+.displayproduct-category span {
+  font-weight: 600;
+}
+.displayproduct-tags {
+  margin-top: 10px;
+}
+
+.displayproduct-tags span {
+  font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .display-product {
+    gap: 20px;
+  }
+  .displayproduct-left {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .displayproduct-prices {
+    margin: 10px 0px;
+  }
+  .displayproduct-discription p {
+    font-size: 15px;
+  }
+  .displayproduct-select-size-list div {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .displayproduct-select-size-list {
+    margin: 5px 0px;
+  }
+  .displayproduct-addtocart {
+    width: 166px;
+    height: 33px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500px;
+  }
+  .displayproduct-category {
+    margin-top: 5px;
+  }
+  .displayproduct-img-list img {
+    height: 85px;
+  }
+  .displayproduct-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .displayproduct-main-img img {
+    width: 302px;
+  }
+
+  .displayproduct-right h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .displayproduct-tags {
+    margin-top: 5px;
+  }
+  .displayproduct-discription {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 800px) {
+  .display-product {
+    gap: 20px;
+  }
+  .displayproduct-left {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .displayproduct-prices {
+    margin: 5px 0px;
+  }
+  .displayproduct-discription p {
+    font-size: 15px;
+  }
+  .displayproduct-select-size-list div {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .displayproduct-select-size-list {
+    margin: 5px 0px;
+  }
+  .displayproduct-addtocart {
+    width: 166px;
+    height: 33px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500px;
+  }
+  .displayproduct-category {
+    margin-top: 5px;
+  }
+  .displayproduct-img-list img {
+    height: 85px;
+  }
+  .displayproduct-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .displayproduct-main-img img {
+    width: 302px;
+  }
+
+  .displayproduct-right h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .displayproduct-tags {
+    margin-top: 0px;
+  }
+  .displayproduct-discription {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .display-product {
+    display: flex;
+    flex-direction: column;
+  }
+  .displayproduct-left {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .displayproduct-img-list img {
+    height: 75px;
+  }
+  .displayproduct-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .displayproduct-main-img img {
+    width: 269px;
+  }
+
+  .displayproduct-right h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

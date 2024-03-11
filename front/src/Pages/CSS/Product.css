@@ -1,0 +1,19 @@
+.product {
+  padding: 50px 100px;
+}
+@media (max-width: 1024px) {
+  .product {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 500px) {
+  .product {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .product {
+    padding: 20px;
+  }
+}
