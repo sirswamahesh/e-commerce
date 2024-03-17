@@ -101,22 +101,12 @@ const Addproduct = () => {
         </select>
       </div>
       <div className="upload_img">
-        <label htmlFor="file-input" style={{ display: "flex", gap: "50px" }}>
-          <i className="fa-solid fa-cloud-arrow-up"></i>
-          <div style={{ width: "100px", height: "100px" }}>
-            <img
-              style={{ objectFit: "contain", width: "100%", height: "100%" }}
-              src={image ? URL.createObjectURL(image) : ""}
-              alt="img"
-            />
-          </div>
-        </label>
+        <h2>Choose image</h2>
         <input
           type="file"
           onChange={handleImg}
           name="image"
           id="file-input"
-          hidden
         ></input>
       </div>
 

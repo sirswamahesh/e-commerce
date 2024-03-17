@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignUp.css";
 import { SERVER_URL } from "../serverurl";
+import Swal from "sweetalert2";
 
+const loginAlert = () => {
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Your work has been saved",
+    showConfirmButton: false,
+    timer: 2000,
+  });
+};
 const LoginSignUp = () => {
   const [state, setState] = useState("Login");
   const [formData, setFromData] = useState({
@@ -16,20 +26,18 @@ const LoginSignUp = () => {
 
   const login = async () => {
     console.log("login function", formData);
-    let responseData;
-    await fetch(`${SERVER_URL}/login`, {
+    const responseData = await fetch(`${SERVER_URL}/login`, {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => (responseData = data));
+    }).then((res) => res.json());
     if (responseData.success) {
+      loginAlert();
+      setTimeout(() => window.location.replace("/"), 700);
       localStorage.setItem("auth-token", responseData.token);
-      window.location.replace("/");
     } else {
       alert(responseData.errors);
     }
@@ -49,6 +57,7 @@ const LoginSignUp = () => {
       .then((res) => res.json())
       .then((data) => (responseData = data));
     console.log(responseData);
+
     if (responseData.success) {
       localStorage.setItem("auth-token", responseData.token);
       window.location.replace("/");
@@ -59,7 +68,7 @@ const LoginSignUp = () => {
   return (
     <div className="loginsignup">
       <div className="login-signup-container">
-        <h2>{state}</h2>
+        <p>{state}</p>
         <div className="login-signup-feilds">
           {state === "Sign Up" ? (
             <input
@@ -72,13 +81,15 @@ const LoginSignUp = () => {
           ) : (
             ""
           )}
+
           <input
-            name="email"
             onChange={changeHandler}
             value={formData.email}
-            type="email"
             placeholder="Your Email"
+            type="email"
+            name="email"
           />
+
           <input
             name="password"
             onChange={changeHandler}
@@ -121,7 +132,9 @@ const LoginSignUp = () => {
 
         <div className="login-signup-agree">
           <input type="checkbox" />
-          <p>By continuing, i agree to the terms of use & privacy policy.</p>
+          <p onClick={loginAlert}>
+            By continuing, i agree to the terms of use & privacy policy.
+          </p>
         </div>
       </div>
     </div>

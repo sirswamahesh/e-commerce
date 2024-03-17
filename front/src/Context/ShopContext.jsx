@@ -38,6 +38,7 @@ const ShopContextProvider = ({ children }) => {
 
   const addToCart = (itemId) => {
     // console.log("add to cart>>>>>>>>>>>>>>>>>>>>");
+
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if (localStorage.getItem("auth-token")) {
       fetch(`${SERVER_URL}/addtocart`, {
@@ -50,7 +51,9 @@ const ShopContextProvider = ({ children }) => {
         body: JSON.stringify({ itemId: itemId }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data, ">>>."));
+    } else {
+      alert("Please authenticate using valid token");
     }
   };
   const RemoveFromCart = (itemId) => {

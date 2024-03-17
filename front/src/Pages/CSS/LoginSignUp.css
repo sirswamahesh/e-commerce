@@ -2,15 +2,25 @@
   background-color: skyblue;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.login-signup-container p {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .login-signup-container {
   background-color: white;
-  width: 40%;
+  width: 35%;
   margin: 50px auto;
   display: flex;
   flex-direction: column;
   padding: 50px;
+  border-radius: 10px;
 }
 
 .login-signup-feilds input {
@@ -21,6 +31,7 @@
   font-size: 14px;
   border: 1px solid #c7c6c6;
   outline: none;
+  border-radius: 5px;
 }
 .login-signup-btn {
   background-color: red;
@@ -31,6 +42,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 .login-signup-already {
   margin: 10px 0px;
@@ -40,9 +53,13 @@
 }
 .login-signup-agree {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
-
+.login-signup-agree p {
+  font-size: 15px;
+  font-weight: 500;
+}
 .login-signup-btn:active {
   background-color: rgb(139, 126, 126);
 }
@@ -106,8 +123,11 @@
     font-size: 14px;
   }
   .login-signup-agree {
-    font-size: 14px;
-    align-items: center;
+    /* align-items: center; */
     gap: 10px;
+  }
+
+  .login-signup-agree p {
+    font-size: 13px;
   }
 }

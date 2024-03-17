@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); //for env file
 const express = require("express");
 const multer = require("multer");
 const jwt = require("jsonwebtoken");
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 const storage = multer.diskStorage({
   destination: "./upload/images",
   filename: (req, file, cb) => {
-    // console.log(file);
+    console.log(file);
     return cb(
       null,
       `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`
@@ -127,7 +127,7 @@ app.post("/login", async (req, res) => {
     if (passCompare) {
       const data = {
         user: {
-          id: user.id,
+          id: user._id,
         },
       };
 
@@ -146,6 +146,7 @@ const fetchUser = async (req, res, next) => {
   const token = req.header("auth-token");
   if (!token) {
     res.status(401).send({ errors: "Please authenticate using valid token" });
+    console.log("Please authenticate using valid token");
   } else {
     const data = jwt.verify(token, "secret_ecom");
     req.user = data.user;

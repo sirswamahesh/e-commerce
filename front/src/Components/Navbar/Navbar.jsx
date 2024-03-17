@@ -15,7 +15,7 @@ const Navbar = () => {
   };
   const { getTotalCartItems } = useContext(ShopContext);
   return (
-    <div className="navbar">
+    <div className="Navbar">
       <div className="nav-logo">
         <img src={logo} alt="" />
         <p>SHOPPER</p>
@@ -24,7 +24,7 @@ const Navbar = () => {
         onClick={menuDownToggle}
         className="fa-solid fa-circle-arrow-right drop-icon"
       ></i>
-      <ul ref={menuRef} className="nav-menu">
+      <ul ref={menuRef} className="nav-menus">
         <li
           onClick={() => {
             setMenu("Shop");

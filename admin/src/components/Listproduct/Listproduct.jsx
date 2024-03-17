@@ -5,7 +5,7 @@ const Listproduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchData = async () => {
-    await fetch(`${SERVER_URL}/allproducts`)
+    await fetch(`http://localhost:4000/allproducts`)
       .then((resp) => resp.json())
       .then((data) => {
         setAllProducts(data);
