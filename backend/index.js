@@ -37,7 +37,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
   });
 });
 
-//Creating api for add products
+// Creating api for add products
 app.post("/addproduct", async (req, res) => {
   let products = await productSchema.find({});
   let id;
