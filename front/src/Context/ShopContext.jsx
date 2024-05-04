@@ -17,7 +17,7 @@ const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(getDefalutCart());
 
   useEffect(() => {
-    fetch(`${SERVER_URL}/allproducts`)
+    fetch(`/allproducts`)
       .then((res) => res.json())
       .then((data) => setAll_Product(data));
 
